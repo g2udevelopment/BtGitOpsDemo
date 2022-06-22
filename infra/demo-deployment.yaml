@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: betatalks-demo
+spec:
+  replicas: 1
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: betatalks-demo
+  template:
+    metadata:
+      labels:
+        app: betatalks-demo
+    spec:
+      containers:
+      - image: g2udevelopment/betatalks:v0.1
+        name: betatalks-demo
+        ports:
+        - containerPort: 80
