@@ -14,7 +14,7 @@ spec:
         app: betatalks-demo
     spec:
       containers:
-      - image: g2udevelopment/betatalks:v0.1
+      - image: g2udevelopment/betatalks:v0.2
         name: betatalks-demo
         ports:
         - containerPort: 80
